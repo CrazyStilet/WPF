@@ -1,0 +1,68 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Exersize2.MainWindow"
+        Title="Резюме" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1" Width="6" Grid.RowSpan="6" HorizontalAlignment="Center"></GridSplitter>
+        <DockPanel Grid.Column="2" Grid.Row="6" HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <Button Margin="3" Padding="5" Content="OK" Name="BtnOK" Click="BtnOK_Click"/>
+                <Button Margin="3" Content="Cancel"/>
+            </StackPanel>
+            <StackPanel></StackPanel>
+        </DockPanel>
+        <StackPanel>
+            <WrapPanel Margin="5">
+                <Label>ФИО</Label>
+                <TextBox Margin="3" MinWidth="100" Name="tbName" Text="Орлов Олег Александрович"/>
+            </WrapPanel>
+            <WrapPanel Margin="5">
+                <Label>Возраст</Label>
+                <TextBox Margin="3" MinWidth="100" Name="tbAge" Text="29"/>
+            </WrapPanel>
+            <WrapPanel Margin="5">
+                <Label>Семейное положение</Label>
+                <TextBox Margin="3" MinWidth="100" Name="tbMartialStatus" Text="Не женат"/>
+            </WrapPanel>
+            <WrapPanel Margin="5">
+                <Label>Адрес</Label>
+                <TextBox Margin="3" MinWidth="100" Name="tbAddress" Text="Минск, аг. Ждановичи, ул. Кольцевая 3 кв. 7"/>
+            </WrapPanel>
+            <WrapPanel Margin="5">
+                <Label>E-mail</Label>
+                <TextBox Margin="3" MinWidth="100" Name="tbEmail" Text="Stilet-2006@yanex.ru"/>
+            </WrapPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="5">
+            <Label>Направление:</Label>
+            <RadioButton Margin="5" Name="radProgramming" IsChecked="True">Разработка программного обеспечения</RadioButton>
+            <RadioButton Margin="5" Name="radDesign">Дизайн</RadioButton>
+            <RadioButton Margin="5" Name="radNetwork">Сетевые технологии</RadioButton>
+            <Label>Навыки:</Label>
+            <WrapPanel>
+                <CheckBox Margin="5" Name="chkCPlusPlus" IsChecked="True">С/С++</CheckBox>
+                <CheckBox Margin="5" Name="chkCSharp" IsChecked="True">С#</CheckBox>
+                <CheckBox Margin="5" Name="chkMSSQL">MS SQL</CheckBox>
+                <CheckBox Margin="5" Name="chkADO" IsChecked="True">ADO.NET</CheckBox>
+                <CheckBox Margin="5" Name="chkUnity" IsChecked="True">Unity</CheckBox>
+                <CheckBox Margin="5" Name="chkPhotoshop">Adobe Photoshop</CheckBox>
+                <CheckBox Margin="5" Name="chkIllustator">Adobe Illustrator</CheckBox>
+                <CheckBox Margin="5" Name="chkHTMLAndCSS">HTML 5 и CSS 3</CheckBox>
+                <CheckBox Margin="5" Name="chk3DSMax">3ds Max</CheckBox>
+                <CheckBox Margin="5" Name="chkMaya">Maya 3D</CheckBox>
+                <CheckBox Margin="5" Name="chkCCNA">CCNA</CheckBox>
+                <CheckBox Margin="5" Name="chkCCNP">CCNP</CheckBox>
+                <CheckBox Margin="5" Name="chkMCSA">MCSA</CheckBox>
+                <CheckBox Margin="5" Name="chkMSCE">MSCE</CheckBox>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

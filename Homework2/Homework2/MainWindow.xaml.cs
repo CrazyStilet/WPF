@@ -23,16 +23,16 @@ namespace Homework2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private System.Windows.Forms.NotifyIcon MyNotifyIcon;
+        NotifyIcon myNotifyIcon;
         DispatcherTimer timer = null;
         DateTime time = new DateTime();
         
         public MainWindow()
         {
             InitializeComponent();
-            MyNotifyIcon = new System.Windows.Forms.NotifyIcon();
-            MyNotifyIcon.Icon = new System.Drawing.Icon("Icon.ico");
-            MyNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(MyNotifyIcon_MouseDoubleClick);
+            myNotifyIcon = new System.Windows.Forms.NotifyIcon();
+            myNotifyIcon.Icon = new System.Drawing.Icon("Icon.ico");
+            myNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(MyNotifyIcon_MouseDoubleClick);
         }
 
         void MyNotifyIcon_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
@@ -45,14 +45,14 @@ namespace Homework2
             if(this.WindowState == WindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
-                MyNotifyIcon.BalloonTipTitle = "Minimize Sucessful";
-                MyNotifyIcon.BalloonTipText = "Minimized the app";
-                MyNotifyIcon.ShowBalloonTip(400);
-                MyNotifyIcon.Visible = true;
+                myNotifyIcon.BalloonTipTitle = "Minimize Sucessful";
+                myNotifyIcon.BalloonTipText = "Minimized the app";
+                myNotifyIcon.ShowBalloonTip(400);
+                myNotifyIcon.Visible = true;
             }
             else if(this.WindowState == WindowState.Normal)
             {
-                MyNotifyIcon.Visible = false;
+                myNotifyIcon.Visible = false;
                 this.ShowInTaskbar = true;
             }
         }
